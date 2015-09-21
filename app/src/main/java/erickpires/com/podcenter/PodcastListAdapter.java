@@ -42,8 +42,6 @@ public class PodcastListAdapter extends BaseAdapter {
 
 
 		TextView contentTextView = (TextView) convertView.findViewById(R.id.content);
-		contentTextView.setText("Erick e Bia " + position);
-
 
 		if(position % 2 == 0) {
 			contentTextView.setTextColor(0xFFDDDDDD);

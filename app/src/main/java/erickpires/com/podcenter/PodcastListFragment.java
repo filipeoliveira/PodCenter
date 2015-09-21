@@ -7,25 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-
 public class PodcastListFragment extends Fragment {
-	/**
-	 * The fragment argument representing the section number for this
-	 * fragment.
-	 */
-	private static final String ARG_SECTION_NUMBER = "section_number";
-
-	/**
-	 * Returns a new instance of this fragment for the given section
-	 * number.
-	 */
-	public static PodcastListFragment newInstance(int sectionNumber) {
+	public static PodcastListFragment newInstance() {
 		PodcastListFragment fragment = new PodcastListFragment();
 		Bundle args = new Bundle();
-		args.putInt(ARG_SECTION_NUMBER, sectionNumber);
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -53,7 +40,5 @@ public class PodcastListFragment extends Fragment {
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		((MainActivity) activity).onSectionAttached(
-														   getArguments().getInt(ARG_SECTION_NUMBER));
 	}
 }
